@@ -322,12 +322,12 @@ Resources:
       MultiRegion: true
       Tags:
         - key: Name
-          value: KMS-ap-south-1-prod
+          value: KMS-CVS-us-east-1-non-prod
 
   KeyAlias:
     Type: AWS::KMS::Alias
     Properties:
-      AliasName: alias/KMS-ap-south-1-prod
+      AliasName: alias/KMS-CVS-us-east-1-non-prod
       TargetKeyId: !Ref Createkmskey
 
   LambdaExecuteRole:
