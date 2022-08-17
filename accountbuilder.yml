@@ -306,6 +306,7 @@ Resources:
   Createkmskey:
     Type: AWS::KMS::Key
     Properties:
+      EnableKeyRotation: true
       Enabled: true
       KeyPolicy:
         Id: key-default-1
@@ -317,7 +318,7 @@ Resources:
             Resource: '*'
             Sid: Enable IAM User Permissions
         Version: "2012-10-17"
-      KeySpec: RSA_2048
+      KeySpec: SYMMETRIC_DEFAULT
       KeyUsage: ENCRYPT_DECRYPT
       MultiRegion: true
       Tags:
